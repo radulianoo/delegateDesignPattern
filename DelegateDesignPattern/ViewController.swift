@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ProductSelectionDelegate {
 
     ///adding the ui elements
     let productImageView = UIImageView()
@@ -20,10 +20,19 @@ class ViewController: UIViewController {
         setupUI()
     }
     
+    //implement the required method
+    func didSelectAppleProduct(name: String, imageName: String) {
+        productNameLabel.text = name
+        productImageView.image = UIImage(named: imageName)
+    }
+    
+    
     func setupUI() {
         view.addSubview(productImageView)
         view.addSubview(productNameLabel)
         view.addSubview(chooseProductButton)
+        
+        
         
         productImageView.translatesAutoresizingMaskIntoConstraints = false
         productNameLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +64,7 @@ class ViewController: UIViewController {
             productNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             productNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             
-            chooseProductButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -padding),
+            chooseProductButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60),
             chooseProductButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             chooseProductButton.heightAnchor.constraint(equalToConstant: 50),
             chooseProductButton.widthAnchor.constraint(equalToConstant: 260)
@@ -66,6 +75,9 @@ class ViewController: UIViewController {
     
     @objc func presentProductSelectionVC() {
         let destinationVC = ProductSelectionVC()
+        //set as the delegate
+        destinationVC.delegate = self
+        
         destinationVC.modalPresentationStyle = .pageSheet
         destinationVC.sheetPresentationController?.detents = [.medium()]
         destinationVC.sheetPresentationController?.prefersGrabberVisible = true

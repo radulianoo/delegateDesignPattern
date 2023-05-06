@@ -7,11 +7,21 @@
 
 import UIKit
 
+//create the protocol
+protocol ProductSelectionDelegate {
+    func didSelectAppleProduct(name: String, imageName: String)
+    
+}
+
+
 class ProductSelectionVC: UIViewController {
 
     let iPhoneButton = UIButton()
     let iPadButton = UIButton()
     let macBookButton = UIButton()
+    
+    //add the property of type of the protocol
+    var delegate: ProductSelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,14 +89,18 @@ class ProductSelectionVC: UIViewController {
     }
     
     @objc func iPhoneButtonTapped() {
-        
+        //set the work that the delegate must do
+        delegate?.didSelectAppleProduct(name: "iPhone 14", imageName: "iphone")
+        dismiss(animated: true)
     }
 
     @objc func iPadButtonTapped() {
-        
+        delegate?.didSelectAppleProduct(name: "iPadAir", imageName: "ipad")
+        dismiss(animated: true)
     }
     
     @objc func macBookButtonTapped() {
-        
+        delegate?.didSelectAppleProduct(name: "MacBook Pro", imageName: "mac")
+        dismiss(animated: true)
     }
 }
