@@ -13,6 +13,7 @@
 		ECCE2B182A06A05200DDFE5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCE2B162A06A05200DDFE5E /* Main.storyboard */; };
 		ECCE2B1A2A06A05300DDFE5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCE2B192A06A05300DDFE5E /* Assets.xcassets */; };
 		ECCE2B1D2A06A05300DDFE5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCE2B1B2A06A05300DDFE5E /* LaunchScreen.storyboard */; };
+		ECCE2B272A06A82F00DDFE5E /* ProductSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCE2B262A06A82F00DDFE5E /* ProductSelectionVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ECCE2B192A06A05300DDFE5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECCE2B1C2A06A05300DDFE5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECCE2B1E2A06A05300DDFE5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECCE2B262A06A82F00DDFE5E /* ProductSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSelectionVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				ECCE2B102A06A05200DDFE5E /* AppDelegate.swift */,
 				ECCE2B122A06A05200DDFE5E /* SceneDelegate.swift */,
 				ECCE2B142A06A05200DDFE5E /* ViewController.swift */,
+				ECCE2B262A06A82F00DDFE5E /* ProductSelectionVC.swift */,
 				ECCE2B162A06A05200DDFE5E /* Main.storyboard */,
 				ECCE2B192A06A05300DDFE5E /* Assets.xcassets */,
 				ECCE2B1B2A06A05300DDFE5E /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				ECCE2B152A06A05200DDFE5E /* ViewController.swift in Sources */,
 				ECCE2B112A06A05200DDFE5E /* AppDelegate.swift in Sources */,
 				ECCE2B132A06A05200DDFE5E /* SceneDelegate.swift in Sources */,
+				ECCE2B272A06A82F00DDFE5E /* ProductSelectionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
